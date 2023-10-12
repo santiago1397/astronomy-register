@@ -46,9 +46,9 @@ export default function FanRegister() {
     <div className="back">
       <div className="background">
         <div className="imgsWrapper">
-          <img className="imgE" src="./src/assets/mincyt.png" alt="" />
-          <img className="imgE" src="./src/assets/logo erace.png" alt="" />
-          <img className="imgE" src="./src/assets/logo semilleros.png" alt="" />
+          <img className="imgE" src="./mincyt.png" alt="" />
+          <img className="imgE" src="./logo erace.png" alt="" />
+          <img className="imgE" src="./logo semilleros.png" alt="" />
         </div>
         <form className="formWrapper" onSubmit={HandleSubmit}>
           <h2 style={{ marginBottom: "30px", color: "#4D92A8" }}>ERACE</h2>
