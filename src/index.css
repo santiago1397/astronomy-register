@@ -1,0 +1,13 @@
+:root {
+}
+*,html{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+  }
+}
