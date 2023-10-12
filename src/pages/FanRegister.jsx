@@ -3,6 +3,7 @@ import "./fanRegister.css"
 import axios from 'axios'
 
 export default function FanRegister() {
+  const BASEURL =  import.meta.env.VITE_BASE_URL
   const nombres = useRef()
   const apellidos = useRef()
   const cedula = useRef()
@@ -20,7 +21,7 @@ export default function FanRegister() {
     e.preventDefault()
 
     try {
-      await axios.post(SF + "api/participantes/", {
+      await axios.post(BASEURL + "api/participantes/", {
         nombres: nombres.current.value,
         apellidos: apellidos.current.value,
         ci: cedula.current.value,
