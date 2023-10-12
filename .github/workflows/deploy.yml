@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  VITE_BASE_URL: https://astronomy-register-backend.onrender.com
+  VITE_BASE_URL: https://astronomy-register-backend.onrender.com/
 
 jobs:
   build:
