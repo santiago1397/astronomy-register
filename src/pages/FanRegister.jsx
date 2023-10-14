@@ -24,6 +24,9 @@ export default function FanRegister() {
     e.preventDefault()
     setLoading(true)
 
+
+    //"https://astronomy-register-backend.onrender.com/"
+
     try {
       await axios.post("https://astronomy-register-backend.onrender.com/" + "api/participantes/", {
         nombres: nombres.current.value,
@@ -32,9 +35,9 @@ export default function FanRegister() {
         edad: edad.current.value,
         sexo: sexo.current.value,
         telefono: telefono.current.value,
-        email: email.current.value,
-        profesion: profesion.current.value,
-        institucion: institucion.current.value,
+        email: email.current.value ? email.current.value : "no posee" ,
+        profesion: profesion.current.value ? profesion.current.value : "no posee",
+        institucion: institucion.current.value ? institucion.current.value : "no posee",
         tipoDeParticipante: "aficionado",
         estado: estado.current.value,
 
@@ -117,13 +120,13 @@ export default function FanRegister() {
             <input ref={telefono} type="text" placeholder='Teléfono' className="input" required />
           </div>
           <div>
-            <input ref={email} type="email" placeholder='Email' className="input" required />
+            <input ref={email} type="email" placeholder='Email' className="input"  />
           </div>
           <div>
-            <input ref={profesion} type="text" placeholder='Profesión' className="input" required />
+            <input ref={profesion} type="text" placeholder='Profesión (opcional)' className="input"  />
           </div>
           <div>
-            <input ref={institucion} type="text" placeholder='Institución' className="input" required />
+            <input ref={institucion} type="text" placeholder='Institución (opcional)' className="input"  />
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
 
