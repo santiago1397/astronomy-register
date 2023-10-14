@@ -83,12 +83,17 @@ export default function FanRegister() {
     <div className="back">
       <div className="background">
         <div className="imgsWrapper">
-          <img className="imgE" src="./mincyt.png" alt="" />
-          <img className="imgE" src="./logo erace.png" alt="" />
-          <img className="imgE" src="./logo semilleros.png" alt="" />
+          <img
+            className="imgE"
+            src="./mincyt.png"
+            alt=""
+            loading="lazy"
+          />
+          <img className="imgE" src="./logo erace.png" alt="" loading="lazy" />
+          <img className="imgE" src="./logo semilleros.png" alt="" loading="lazy" />
         </div>
         <form className="formWrapper" onSubmit={HandleSubmit}>
-          <h2 style={{ marginBottom: "30px", color: "#4D92A8" }}>REGISTRO AFICIONADOS ERACE MIRANDA</h2>
+          <h2 style={{ marginBottom: "30px", color: "black" }}>REGISTRO AFICIONADOS ERACE MIRANDA</h2>
           <div>
             <input ref={nombres} placeholder="Nombres" className="input" name="text" type="text" required />
           </div>
@@ -99,13 +104,13 @@ export default function FanRegister() {
             <input ref={cedula} type="text" placeholder='Cédula' className="input" required />
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", width: "70%", margin: "0 auto", gap: "50px" }}>
-              <input ref={edad} type="number" placeholder='Edad' className="input" required />
+            <input ref={edad} type="number" placeholder='Edad' className="input" required />
 
-              <select ref={sexo} name="Estado" id="Estado" placeholder='Estado' className="select" required>
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-              </select>
-              {/* <input ref={sexo} type="text" placeholder='Sexo' className="input" /> */}
+            <select ref={sexo} name="Estado" id="Estado" placeholder='Estado' className="select" required>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+            {/* <input ref={sexo} type="text" placeholder='Sexo' className="input" /> */}
 
           </div>
           <div>
