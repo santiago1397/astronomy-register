@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import "./fanRegister.css"
 import axios from 'axios'
 import { toast } from 'react-toastify';
@@ -17,6 +17,36 @@ export default function FanRegister() {
   const institucion = useRef()
   const tipoParticipacion = useRef("aficionado")
   const estado = useRef()
+
+  /*useEffect(() => {
+    var ok
+     async function lmao(){
+      try{
+        ok = await axios.get("http://localhost:8800/" + "api/participantes/all") 
+
+        let countF =0
+        let countM =0
+        let avg =0
+
+        ok.data.forEach(item =>{
+          if (item.sexo ==="Masculino"){
+            countM++
+          }else{countF++}
+          avg = avg +item.edad
+        })
+
+        console.log(countF)
+        console.log(countM)
+        console.log(avg/696)
+      }catch(err){
+        console.log(err)
+      }
+    }
+    lmao()
+
+    
+  },[]); */
+
 
 
   async function HandleSubmit(e) {
@@ -96,7 +126,7 @@ export default function FanRegister() {
           <img className="imgE" src="./logo semilleros.png" alt="" loading="lazy" />
         </div>
         <form className="formWrapper" onSubmit={HandleSubmit}>
-          <h2 style={{ marginBottom: "30px", color: "black" }}>REGISTRO AFICIONADOS ERACE MIRANDA</h2>
+          <h2 style={{ marginBottom: "30px", color: "black" }}>REGISTRO AFICIONADOS ERACE GUÁRICO</h2>
           <div>
             <input ref={nombres} placeholder="Nombres" className="input" name="text" type="text" required />
           </div>
